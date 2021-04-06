@@ -4,6 +4,7 @@ from .TpLinkHandlerSmartPlug import TpLinkHandlerSmartPlug as wallPlug
 from .TpLinkHandlerSmartStrip import TpLinkHandlerSmartStrip as wallStrip
 import octoprint.plugin
 import flask
+import time
 
 
 class TpLinkAutoShutdown(octoprint.plugin.StartupPlugin, octoprint.plugin.SettingsPlugin,
@@ -39,6 +40,7 @@ class TpLinkAutoShutdown(octoprint.plugin.StartupPlugin, octoprint.plugin.Settin
 				f"The print has completed. Auto-shutdown is set to {str(self._settings.get(['smartPlug', 'auto']))}")
 			if self._settings.get(["smartPlug", "auto"]) and not self._settings.get(["smartPlug", "movieDone"]):
 				self._logger.info("Printer is being shutdown")
+				time.sleep(60)
 				self.conn.shutdown()
 		# If the plug being used is a smartStrip
 		# Children are zero indexed, contrary to documentation
