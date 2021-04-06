@@ -23,13 +23,13 @@ plugin_version = "1.1.2"
 plugin_description = """Automatically controlling a TP Link wall plug to turn off the printer upon compleation of the print"""
 
 # The plugin's author. Can be overwritten within OctoPrint's internal data via __plugin_author__ in the plugin module
-plugin_author = "James D. McCannon"
+plugin_author = "Brent Hughes"
 
 # The plugin's author's mail address.
-plugin_author_email = "james@mccannon.co.uk"
+plugin_author_email = "brentahughes@gmail.com"
 
 # The plugin's homepage URL. Can be overwritten within OctoPrint's internal data via __plugin_url__ in the plugin module
-plugin_url = "https://github.com/jamesmccannon02/OctoPrint-Tplinkautoshutdown"
+plugin_url = "https://github.com/brentahughes/OctoPrint-Tplinkautoshutdown"
 
 # The plugin's license. Can be overwritten within OctoPrint's internal data via __plugin_license__ in the plugin module
 plugin_license = "AGPLv3"
